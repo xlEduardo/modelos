@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mostrarVehiculo :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<h1 class="h1"> Registrar Vehiculo</h1>
+<br>
+<div class="div">
+    <form class="form" action="#" th:action="@{/vehiculo}" th:object="${vehiculo}" method="post">
+        <div >
+            <label class="label" for="InputMarca"> Marca</label><br>
+            <input class="input" type="text"  th:field="*{marca}" id="InputMarca"  placeholder="Enter marca">
+        </div>
+        <div >
+            <label class="label" for="InputModelo"> Modelo</label><br>
+            <input class="input"type="text"  th:field="*{modelo}"  id="InputModelo"  placeholder="Enter modelo">
+        </div>
+        <div >
+            <label class="label" for="InputColor"> Color</label><br>
+            <input class="input" type="text"  th:field="*{color}" id="InputColor"  placeholder="Enter color">
+        </div>
+        <div >
+            <label class="label" for="InputAnio"> Año</label><br>
+            <input class="input" type="text" th:field="*{anio}"  id="InputAnio"  placeholder="Enter año">
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+    <br>
+</div>
+</body>
+</html>

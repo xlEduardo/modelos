@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehiculos</title>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link th:href="@{/estiloV.css}" rel="stylesheet" />
+</head>
+<body>
+<br>
+<h1 class="h1">Lista de Vehiculos</h1>
+<br>
+<div class="div1">
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Marca </th>
+        <th> Modelo </th>
+        <th> Color </th>
+        <th> Año </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehiculo: ${vehiculo}">
+        <td th:text="${vehiculo.getVehiculoId()}"> </td>
+        <td th:text="${vehiculo.getMarca()}"> </td>
+        <td th:text="${vehiculo.getModelo()}"> </td>
+        <td th:text="${vehiculo.getColor()}"> </td>
+        <td th:text="${vehiculo.getAnio()}"> </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<a href="/vehiculo">Submit another message</a>
+</body>
+</html>

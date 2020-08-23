@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.div {
+	margin:0 auto;
+    width:25%;
+    border-radius: 39px 39px 39px 39px;
+    -moz-border-radius: 39px 39px 39px 39px;
+    -webkit-border-radius: 39px 39px 39px 39px;
+    border: 3px solid #000000;
+    background-color: darkred;
+}
+
+.div1{
+    margin:0 auto;
+    width:80%;
+}
+
+.h1{
+    text-align: center;
+    font-size: 45px;
+    color: black;
+    font-family: Constantia;
+}
+
+.input {
+    margin:0 auto;
+    width:80%
+}
+
+.label {
+    font-size: 20px;
+    color: black;
+    font-family: Afterglow, "Agency FB";
+}
+
+.form{
+    margin:0 auto;
+    width: 75%;
+    text-align: center;
+}

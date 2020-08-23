@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mostrarAnimal :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<h1 class="h1"> Registrar Animal</h1>
+<br>
+<div class="div">
+    <form class="form" action="#" th:action="@{/addanimal}" th:object="${animal}" method="post">
+        <div >
+            <label class="label" for="InputMarca"> Nombre</label><br>
+            <input class="input" type="text"  th:field="*{nombre}" id="InputMarca"  placeholder="Enter nombre">
+        </div>
+        <div >
+            <label class="label" for="InputModelo"> Categoria</label><br>
+            <input class="input"type="text"  th:field="*{category}"  id="InputModelo"  placeholder="Enter categoria">
+        </div>
+        <div >
+            <label class="label" for="InputColor"> Color</label><br>
+            <input class="input" type="text"  th:field="*{color}" id="InputColor"  placeholder="Enter color">
+        </div>
+        <div >
+            <label class="label" for="InputAnio"> Pelaje</label><br>
+            <input class="input" type="text" th:field="*{pelaje}"  id="InputAnio"  placeholder="Enter pelaje">
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+    <br>
+</div>
+</body>
+</html>

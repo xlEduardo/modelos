@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Cosa </th>
+        <th> Altura </th>
+        <th> Color </th>
+        <th> Material </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="objeto: ${objetos}">
+        <td th:text="${objeto.getObjetoId()}"> </td>
+        <td th:text="${objeto.getNombre()}"> </td>
+        <td th:text="${objeto.getAltura()}"> </td>
+        <td th:text="${objeto.getColor()}"> </td>
+        <td th:text="${objeto.getMaterial()}"> </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>

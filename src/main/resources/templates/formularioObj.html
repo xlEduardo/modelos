@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mostrarObj :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<h1 class="h1"> Registrar Objeto </h1>
+<br>
+<div class="div">
+    <form class="form" action="#" th:action="@{/objeto}" th:object="${objeto}" method="post">
+        <div >
+            <label class="label" for="InputMarca"> Nombre</label><br>
+            <input class="input" type="text"  th:field="*{nombre}" id="InputMarca"  placeholder="Enter nombre">
+        </div>
+        <div >
+            <label class="label" for="InputModelo"> Altura </label><br>
+            <input class="input"type="text"  th:field="*{altura}"  id="InputModelo"  placeholder="Enter altura">
+        </div>
+        <div >
+            <label class="label" for="InputColor"> Color</label><br>
+            <input class="input" type="text"  th:field="*{color}" id="InputColor"  placeholder="Enter color">
+        </div>
+        <div >
+            <label class="label" for="InputAnio"> Material</label><br>
+            <input class="input" type="text" th:field="*{material}"  id="InputAnio"  placeholder="Enter material">
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+    <br>
+</div>
+</body>
+</html>

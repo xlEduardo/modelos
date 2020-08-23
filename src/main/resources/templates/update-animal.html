@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mostrarAnimal :: head">
+
+    <title> Editar animal </title>
+</head>
+<body>
+<br>
+<h1 class="h1"> Editar Animal</h1>
+<br>
+<div class="div">
+    <form class="form" action="#" th:action="@{/actualizar/{id}(id=${animal.animalId})}" th:object="${animal}" method="post">
+        <div >
+            <label class="label" for="InputMarca"> Nombre</label><br>
+            <input class="input" type="text"  th:field="*{nombre}" id="InputMarca" >
+            <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="text-danger"></span>
+        </div>
+        <div >
+            <label class="label" for="InputModelo"> Categoria</label><br>
+            <input class="input"type="text"  th:field="*{category}"  id="InputModelo"  >
+            <span th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="text-danger"></span>
+        </div>
+        <div >
+            <label class="label" for="InputColor"> Color</label><br>
+            <input class="input" type="text"  th:field="*{color}" id="InputColor"  >
+            <span th:if="${#fields.hasErrors('color')}" th:errors="*{color}" class="text-danger"></span>
+        </div>
+        <div >
+            <label class="label" for="InputAnio"> Pelaje</label><br>
+            <input class="input" type="text" th:field="*{pelaje}"  id="InputAnio"  >
+            <span th:if="${#fields.hasErrors('pelaje')}" th:errors="*{pelaje}" class="text-danger"></span>
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-primary" value="Update User">Submit</button></center>
+    </form>
+    <br>
+</div>
+</body>
+</html>
